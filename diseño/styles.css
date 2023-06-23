@@ -21,6 +21,12 @@ header{
     gap: 240px;
 }
 
+.hamburger{
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
 .logo{
     width: 108px;
 }
@@ -37,7 +43,7 @@ nav ul li{
     font-size: 13px;
 }
 
-.contact{
+.boton{
     border: none;
     border-radius: 50px;
     color: #FFFFFF;
@@ -101,13 +107,14 @@ nav ul li{
 }
 
 .contenedor1 h2,.contenedor1 p{
-    width: 450px;
+    width: 480px;
     line-height: 26px;
 }
 
 .contenedor1 h2{
     font-size: 36px;
     line-height: 42px;
+    font-weight: 700;
 }
 
 .contenedor2{
@@ -117,6 +124,9 @@ nav ul li{
     justify-content: center;
     background: #FAFAFA;
     align-items: center;
+    gap: 24px 50px;
+    padding: 40px 0;
+    box-sizing: border-box;
 }
 
 .contenedor2 article{
@@ -125,7 +135,6 @@ nav ul li{
     align-items: center;
     width: 530px;
     height: 162px;
-    margin: 30px 0 0 0;
 }
 
 .contenedor2 button{
@@ -159,7 +168,63 @@ nav ul li{
 }
 
 .contenedor3{
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+
+.contenedor3 h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+    width: 424px;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 90px 0 110px 0;
+    color: #242E53;
+    letter-spacing: -0.4px;
+}
+
+.reseñas{
+    display: flex;
+}
+
+.contenedor3 article{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    background: #FAFAFA;
+    width: 445px;
+    height: 220px;
+    padding: 0 20px 10px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenedor3 article img{
+    position: absolute;
+    align-self: center;
+    top: -45px;
+    width: 87px;
+}
+
+.contenedor3 article h4{
+    color: #3F4868;
+    margin: 21px 0;
+    font-weight: 700;
+}
+
+.contenedor3 article p{
+    line-height: 25px;
+    color: #B9B9C1;
+}
+
+.contenedor3 button{
+    display: none;
+    margin: 40px 0;
 }
 
 .contenedor4{
@@ -178,6 +243,11 @@ nav ul li{
     font-weight: 700;
     color: #FFFFFF;
     line-height: 50px;
+}
+
+.contenedor4 h2 span{
+    font-weight: 700;
+    font-size: 40px;
 }
 
 .contenedor4 button{
@@ -258,12 +328,126 @@ footer .navegacion ul li{
 .copyright{
     position: absolute;
     bottom: 30px;
-    right: 150px;
+    align-self: center;
     color: #8C8C94;
     font-size: 12.5px;
 }
 
+@media (max-width: 480px){
 
+    body{
+        width: 480px;
+    }
+
+    header{
+        height: 140px;
+    }
+
+    header button, nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .banner{
+        height: 904px;
+        flex-direction: column;
+    }
+
+    .banner img, .banner article{
+        width: 400px;
+    }
+
+    .banner img{
+        height: 342px;
+    };
+
+    .banner article{
+        height: 400px;
+    }
+
+    .banner article h1{
+        font-size: 45px;
+    }
+
+    .contenedor1{
+        background-color: #3CDDF3;
+        height: 306px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contenedor1 h2,.contenedor1 p{
+        width: 440px;
+    }
+
+    .contenedor2{
+        height: 800px;
+    }
+
+    .contenedor3{
+        height: 540px;
+    }
+
+    .contenedor4{
+        background-color: #3CDDF3;
+        flex-direction: column;
+        height: 366px;
+    }
+
+    .contenedor4 h2{
+        width: 324px;
+        height: 192px;
+        text-align: center;
+    }
+
+    .contenedor4 h2 span{
+        white-space: pre-line;
+    }
+
+    .contenedor4 h2 span::after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .contenedor4 button{
+        background: #232C50;
+        color: #FFFFFF;
+    }
+
+    footer{
+        flex-direction: column-reverse;
+        height: 535px;
+        justify-content: space-evenly;
+    }
+
+    footer .navegacion{
+        width: 324px;
+        justify-content: space-between;
+    }
+
+    footer .redesSociales{
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer .imgRedesSociales{
+        gap: 60px;
+    }
+
+    .buscador{
+        height: 68px;
+    }
+
+    .buscador input{
+        width: 308px;
+    }
+
+}
 
 
 
