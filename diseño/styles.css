@@ -9,6 +9,13 @@
 body{
     width: 1440px;
     margin: auto;
+    box-sizing: border-box;
+}
+
+button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    animation: rotacion 1s infinite;
 }
 
 header{
@@ -40,7 +47,17 @@ nav ul{
 
 nav ul li{
     list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
     font-size: 13px;
+}
+
+nav ul li a:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .boton{
@@ -215,6 +232,7 @@ nav ul li{
     align-self: center;
     top: -45px;
     width: 87px;
+    animation: palpitar 2s infinite;
 }
 
 .contenedor3 article h4{
@@ -229,7 +247,6 @@ nav ul li{
 }
 
 .contenedor3 button{
-    display: none;
     margin: 40px 0;
 }
 
@@ -392,6 +409,7 @@ footer .navegacion ul li{
     .contenedor2{
         height: 800px;
         justify-content: flex-end;
+        background-color: #FFFFFF;
     }
 
     .contenedor2 article{
@@ -493,5 +511,13 @@ footer .navegacion ul li{
 
 }
 
+@keyframes palpitar {
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
 
+@keyframes rotacion {
+    50%{transform: rotate(2deg);}
+    100%{transform: rotate(-2deg);}
+}
 
